@@ -23,7 +23,9 @@ def marks(request: Request):
     for parameter_name in parameters:
         parameter_values = request.query_params.getlist(parameter_name)
         print(f"Parameter: {parameter_name}, Values: {parameter_values}")
-    return ("marks", parameter_values[0], parameter_values[1])
+    return {
+        "marks" : value for value in request.query_params.values()
+    }
 
 
 
