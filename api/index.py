@@ -1,8 +1,15 @@
 from fastapi import FastAPI 
 
 app = FastAPI()
+
 @app.get("/")
 def index():
     return {
-        "message": "wlcome to the FastAPI",
+        "message": "wlcome to the FastAPI"
     }
+
+
+
+
+
+
